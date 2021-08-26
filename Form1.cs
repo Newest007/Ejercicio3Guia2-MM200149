@@ -40,6 +40,8 @@ namespace Ejercicio3Guia2_MM200149
             {
                 x1 = (-valorb + Math.Sqrt(formula)) / (2 * valora);
                 txtrespuesta1.Text = x1.ToString();
+                x2 = (-valorb - Math.Sqrt(formula)) / (2 * valora);
+                txtrespuesta2.Text = x2.ToString();
             }
 
             
