@@ -33,14 +33,15 @@ namespace Ejercicio3Guia2_MM200149
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtA = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtrespuesta1 = new System.Windows.Forms.TextBox();
+            this.txtrespuesta2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,26 +85,26 @@ namespace Ejercicio3Guia2_MM200149
             this.label4.TabIndex = 3;
             this.label4.Text = "Valor de c";
             // 
-            // textBox1
+            // txtA
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtA.Location = new System.Drawing.Point(96, 103);
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(53, 20);
+            this.txtA.TabIndex = 4;
             // 
-            // textBox2
+            // txtB
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(54, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtB.Location = new System.Drawing.Point(274, 103);
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(54, 20);
+            this.txtB.TabIndex = 5;
             // 
-            // textBox3
+            // txtC
             // 
-            this.textBox3.Location = new System.Drawing.Point(445, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtC.Location = new System.Drawing.Point(445, 103);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(54, 20);
+            this.txtC.TabIndex = 6;
             // 
             // label5
             // 
@@ -125,19 +126,19 @@ namespace Ejercicio3Guia2_MM200149
             this.label6.TabIndex = 8;
             this.label6.Text = "X2";
             // 
-            // textBox4
+            // txtrespuesta1
             // 
-            this.textBox4.Location = new System.Drawing.Point(179, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(53, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtrespuesta1.Location = new System.Drawing.Point(179, 169);
+            this.txtrespuesta1.Name = "txtrespuesta1";
+            this.txtrespuesta1.Size = new System.Drawing.Size(53, 20);
+            this.txtrespuesta1.TabIndex = 9;
             // 
-            // textBox5
+            // txtrespuesta2
             // 
-            this.textBox5.Location = new System.Drawing.Point(337, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(53, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtrespuesta2.Location = new System.Drawing.Point(337, 168);
+            this.txtrespuesta2.Name = "txtrespuesta2";
+            this.txtrespuesta2.Size = new System.Drawing.Size(53, 20);
+            this.txtrespuesta2.TabIndex = 10;
             // 
             // button1
             // 
@@ -145,27 +146,43 @@ namespace Ejercicio3Guia2_MM200149
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(217, 233);
+            this.button1.Location = new System.Drawing.Point(217, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 43);
             this.button1.TabIndex = 11;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.btnsalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsalir.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnsalir.Location = new System.Drawing.Point(217, 292);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(125, 43);
+            this.btnsalir.TabIndex = 12;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(527, 310);
+            this.ClientSize = new System.Drawing.Size(554, 347);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtrespuesta2);
+            this.Controls.Add(this.txtrespuesta1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtC);
+            this.Controls.Add(this.txtB);
+            this.Controls.Add(this.txtA);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -173,6 +190,7 @@ namespace Ejercicio3Guia2_MM200149
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,14 +202,15 @@ namespace Ejercicio3Guia2_MM200149
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.TextBox txtB;
+        private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtrespuesta1;
+        private System.Windows.Forms.TextBox txtrespuesta2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsalir;
     }
 }
 
