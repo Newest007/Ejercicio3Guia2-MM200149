@@ -24,23 +24,23 @@ namespace Ejercicio3Guia2_MM200149
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double valora, valorb, valorc, x1, x2, formula;
+            double valora, valorb, valorc, x1, x2, primeraparte;
 
             valora = Convert.ToDouble(txtA.Text);
             valorb = Convert.ToDouble(txtB.Text);
             valorc = Convert.ToDouble(txtC.Text);
-            formula = valorb * valorb - 4.0 * valora * valorc;
+            primeraparte = valorb * valorb - 4.0 * valora * valorc;
 
-            if(formula < 0)
+            if(primeraparte < 0)
             {
-                MessageBox.Show("El resultado es Imaginario");
+                MessageBox.Show("El resultado es Imaginario", "");
             }
             
             else
             {
-                x1 = (-valorb + Math.Sqrt(formula)) / (2 * valora);
+                x1 = (-valorb + Math.Sqrt(primeraparte)) / (2 * valora);
                 txtrespuesta1.Text = x1.ToString();
-                x2 = (-valorb - Math.Sqrt(formula)) / (2 * valora);
+                x2 = (-valorb - Math.Sqrt(primeraparte)) / (2 * valora);
                 txtrespuesta2.Text = x2.ToString();
             }
 
